@@ -1,11 +1,8 @@
-const initialState = {};
+import { combineReducers } from "redux";
+import photosReducer from "./photosReducer";
+import singlePhotoReducer from "./singlePhotoReducer";
 
-const rootReducer = (action, state = initialState) => {
-  switch (action) {
-    default: {
-      return state;
-    }
-  }
-};
-
-export default rootReducer;
+export default combineReducers({
+  photos: photosReducer,
+  singlePhoto: singlePhotoReducer,
+});
