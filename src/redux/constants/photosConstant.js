@@ -1,0 +1,4 @@
+export const FETCH_PHOTOS = "FETCH_PHOTOS";
+export const LOADING_PHOTOS = "LOADING_PHOTOS";
+export const FETCH_PHOTOS_LOADED = "FETCH_PHOTOS_LOADED";
+export const ERROR = "ERROR";
