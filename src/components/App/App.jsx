@@ -4,6 +4,7 @@ import { Container } from "react-bootstrap";
 
 import Header from "../Header/Header";
 import Loader from "../Loader/Loader";
+import Main from "../Main/Main";
 // import { fetchPhotos } from "../../redux/actions/photosAction";
 import { fetchSinglePhoto } from "../../redux/actions/singlePhotoActions";
 
@@ -19,6 +20,7 @@ const App = () => {
       <Header />
       <Container>
         <h1>Hello</h1>
+        <Main />
         {loading ? <Loader /> : null}
       </Container>
     </>
