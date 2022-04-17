@@ -16,7 +16,7 @@ export async function getAllPhotos() {
 
 export async function getSinglePhoto(id) {
   try {
-    return await inctance.get(id).then((result) => result);
+    return await inctance.get(`/${id}`).then((result) => result.data);
   } catch (e) {
     console.log(e);
   }

@@ -24,6 +24,7 @@ export function* photosWatcher() {
 function* fetchSinglePhotoWorker({ id }) {
   yield call(fetchSinglePhoto);
   const res = yield call(getSinglePhoto, id);
+  console.log(res);
   yield put(fetchSinglePhotoLoaded(res));
 }
 
