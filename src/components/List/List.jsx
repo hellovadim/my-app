@@ -7,7 +7,7 @@ const List = (props) => {
   return (
     <ul className="list">
       {photos.map((item) => (
-        <ListItem url={item.url} key={item.id} />
+        <ListItem url={item.url} id={item.id} key={item.id} />
       ))}
     </ul>
   );

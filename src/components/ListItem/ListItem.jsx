@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { Card, Button } from "react-bootstrap";
 import { useState } from "react";
 
@@ -6,7 +8,7 @@ import "./ListItem.scss";
 const ListItem = (props) => {
   const { id, url } = props;
   const [mouseUp, setMouseup] = useState(false);
-  console.log(mouseUp);
+  console.log(id);
   return (
     <li className="image">
       <Card
@@ -19,7 +21,7 @@ const ListItem = (props) => {
           className={mouseUp ? "image__btn active" : "image__btn"}
           variant="primary"
         >
-          Подробнее
+          <Link to={`${id}`}>Подробнее</Link>
         </Button>
       </Card>
     </li>
