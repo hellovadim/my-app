@@ -1,4 +1,7 @@
-import { FETCH_SINGLE_PHOTO_LOADED } from "../constants/singlePhotoConstant";
+import {
+  FETCH_SINGLE_PHOTO_LOADED,
+  LOADING_SINGLE_PHOTO,
+} from "../constants/singlePhotoConstant";
 
 const initialState = {
   singlePhoto: {},
@@ -12,6 +15,12 @@ const singlePhotoReducer = (state = initialState, action) => {
       return {
         ...state,
         singlePhoto: action.payload,
+        loading: false,
+      };
+    case LOADING_SINGLE_PHOTO:
+      return {
+        ...state,
+        loading: true,
       };
 
     default:

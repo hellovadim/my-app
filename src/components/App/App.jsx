@@ -1,27 +1,26 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { Row, Button, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
+import Header from "../Header/Header";
+import Loader from "../Loader/Loader";
+// import { fetchPhotos } from "../../redux/actions/photosAction";
 import { fetchSinglePhoto } from "../../redux/actions/singlePhotoActions";
 
-import { getSinglePhoto } from "../../axios/axios";
 const App = () => {
+  const loading = useSelector((state) => state.singlePhoto.loading);
   const dispatch = useDispatch();
-  const photo = useSelector((state) => state.singlePhoto);
-
+  console.log(loading);
+  useEffect(() => {
+    dispatch(fetchSinglePhoto(2));
+  }, []);
   return (
     <>
-      <Row className="mx-0">
-        <Button as={Col} variant="primary">
-          Button #1
-        </Button>
-        <Button as={Col} variant="secondary" className="mx-2">
-          Button #2
-        </Button>
-        <Button as={Col} variant="success">
-          Button #3
-        </Button>
-      </Row>
+      <Header />
+      <Container>
+        <h1>Hello</h1>
+        {loading ? <Loader /> : null}
+      </Container>
     </>
   );
 };

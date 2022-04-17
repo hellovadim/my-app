@@ -17,3 +17,8 @@ export const fetchPhotos = () => {
     type: FETCH_PHOTOS,
   };
 };
+export const loadingPhotos = () => {
+  return {
+    type: LOADING_PHOTOS,
+  };
+};

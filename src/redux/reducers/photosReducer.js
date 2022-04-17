@@ -1,4 +1,7 @@
-import { FETCH_PHOTOS, FETCH_PHOTOS_LOADED } from "../constants/photosConstant";
+import {
+  FETCH_PHOTOS_LOADED,
+  LOADING_PHOTOS,
+} from "../constants/photosConstant";
 
 const initialState = {
   photos: [],
@@ -12,7 +15,14 @@ const photosReducer = (state = initialState, action) => {
       return {
         ...state,
         photos: action.payload,
+        loading: false,
       };
+    case LOADING_PHOTOS: {
+      return {
+        ...state,
+        loading: true,
+      };
+    }
     default:
       return state;
   }
