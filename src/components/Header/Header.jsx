@@ -3,7 +3,7 @@ import "./Header.scss";
 
 const Header = () => {
   return (
-    <Navbar bg="primary" expand={false} collapseOnSelect={true}>
+    <Navbar bg="light" expand={false} collapseOnSelect={true}>
       <Container fluid>
         <Navbar.Brand>Моё тестовое задание</Navbar.Brand>
         <Navbar.Toggle aria-controls="offcanvasNavbar" />

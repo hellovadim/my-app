@@ -5,23 +5,17 @@ import { Container } from "react-bootstrap";
 import Header from "../Header/Header";
 import Loader from "../Loader/Loader";
 import Main from "../Main/Main";
-// import { fetchPhotos } from "../../redux/actions/photosAction";
 import { fetchSinglePhoto } from "../../redux/actions/singlePhotoActions";
 
 const App = () => {
-  const loading = useSelector((state) => state.singlePhoto.loading);
-  const dispatch = useDispatch();
-  console.log(loading);
-  useEffect(() => {
-    dispatch(fetchSinglePhoto(2));
-  }, []);
+  const loadingPhotos = useSelector((state) => state.photos.loading);
+
   return (
     <>
       <Header />
       <Container>
-        <h1>Hello</h1>
         <Main />
-        {loading ? <Loader /> : null}
+        {loadingPhotos ? <Loader /> : null}
       </Container>
     </>
   );
