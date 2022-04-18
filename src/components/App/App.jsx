@@ -7,10 +7,10 @@ import About from "../About/About";
 
 const App = () => {
   return (
-    <Router basename="/my-app">
+    <Router basename="/">
       <Header />
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="" element={<Main />} />
         <Route path={":id"} element={<SinglePhoto />} />
         <Route path="about" element={<About />} />
       </Routes>
