@@ -8,7 +8,7 @@ import "./ListItem.scss";
 const ListItem = (props) => {
   const { id, url } = props;
   const [mouseUp, setMouseup] = useState(false);
-  console.log(id);
+
   return (
     <li className="image">
       <Card

@@ -7,9 +7,17 @@
     transform: translateX(-50%);
     position: absolute;
     opacity: 0;
+   
   }
   .active{
     opacity: 1;
+  }
+  a{
+    text-decoration: none;
+    color: #fff;
+    &:hover{
+      color: #fff;
+    }
   }
 }
 

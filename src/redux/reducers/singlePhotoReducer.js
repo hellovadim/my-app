@@ -1,6 +1,7 @@
 import {
   FETCH_SINGLE_PHOTO_LOADED,
   LOADING_SINGLE_PHOTO,
+  FETCH_SINGLE_PHOTO,
 } from "../constants/singlePhotoConstant";
 
 const initialState = {
@@ -18,6 +19,11 @@ const singlePhotoReducer = (state = initialState, action) => {
         loading: false,
       };
     case LOADING_SINGLE_PHOTO:
+      return {
+        ...state,
+        loading: true,
+      };
+    case FETCH_SINGLE_PHOTO:
       return {
         ...state,
         loading: true,
