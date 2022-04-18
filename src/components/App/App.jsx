@@ -7,7 +7,7 @@ import About from "../About/About";
 
 const App = () => {
   return (
-    <Router basename="/">
+    <Router basename="/my-app">
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
