@@ -11,10 +11,10 @@ const MyAvatar = () => {
         style={{ width: "96px", height: "103px" }}
         alt="ava"
       />
-      <adress>
-        Вадим Гетта <br /> Мой email:
-        <a href="mailto:hellovados@gmail.com">hellovados@gmail.com</a>
-      </adress>
+
+      <h4>Вадим Гетта</h4>
+      <span>Мой email:</span>
+      <a href="mailto:hellovados@gmail.com">hellovados@gmail.com</a>
     </div>
   );
 };

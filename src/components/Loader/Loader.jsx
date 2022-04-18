@@ -1,12 +1,7 @@
-import { Spinner, Col, Row } from "react-bootstrap";
+import { Spinner } from "react-bootstrap";
+import "./Loader.scss";
 
 export const Loader = () => {
-  return (
-    <Row>
-      <Col xs={6} md={4}>
-        <Spinner animation="grow" variant="primary" />
-      </Col>
-    </Row>
-  );
+  return <Spinner animation="grow" variant="primary" className="loader" />;
 };
 export default Loader;

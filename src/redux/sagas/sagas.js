@@ -29,7 +29,6 @@ function* fetchSinglePhotoWorker({ id }) {
   yield delay(500);
   yield call(fetchSinglePhoto);
   const res = yield call(getSinglePhoto, id);
-  console.log(res);
   yield put(fetchSinglePhotoLoaded(res));
 }
 
